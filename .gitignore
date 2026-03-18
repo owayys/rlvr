@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.runs/
+.ray/
+*.log
+runs/
+*.egg-info/
+/models/
+.env
+data/
+checkpoints/
+wandb/
+.tmp/
+.github/

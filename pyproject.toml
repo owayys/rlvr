@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rlvr"
+version = "0.1.0"
+description = "Minimal RLVR training setup for countdown task with verl"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "owayys" }]
+
+dependencies = [
+  "verl>=0.7.0,<0.8.0",
+  "vllm>=0.7.0",
+  "datasets>=2.18.0",
+  "transformers>=4.40.0",
+  "torch>=2.0.0",
+  "omegaconf>=2.3.0",
+  "pydantic>=2.0.0",
+  "numpy>=1.24.0",
+  "wandb>=0.16.0",
+  "huggingface-hub>=0.23.0",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+  "black>=23.0",
+  "ruff>=0.1.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
